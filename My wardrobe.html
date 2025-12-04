@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Wardrobe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Smart Wardrobe</h1>
+        <p>Your outfits in one place</p>
+    </header>
+
+    <section class="container">
+
+        <div class="card">
+            <h2>Add an item</h2>
+
+            <label>Category</label>
+            <select id="category">
+                <option value="top">Top</option>
+                <option value="jeans">Jeans</option>
+                <option value="kurti">Kurti</option>
+                <option value="jacket">Jacket</option>
+                <option value="layering">Layering top</option>
+                <option value="bag">Bag</option>
+                <option value="shoes">Shoes</option>
+                <option value="jewelry">Jewelry</option>
+            </select>
+
+            <label>Name</label>
+            <input id="name" type="text" placeholder="Black shirt">
+
+            <label>Photo</label>
+            <input id="photo" type="file" accept="image/*">
+
+            <button class="btn" onclick="addItem()">Add</button>
+        </div>
+
+        <div class="card">
+            <h2>Your items</h2>
+            <div id="list" class="grid"></div>
+        </div>
+
+        <div class="card">
+            <h2>Outfit generator</h2>
+
+            <label>Occasion</label>
+            <select id="occasion">
+                <option value="casual">Casual</option>
+                <option value="college">College</option>
+                <option value="party">Party</option>
+                <option value="ethnic">Ethnic day</option>
+            </select>
+
+            <button class="btn" onclick="suggestOutfit()">Suggest outfit</button>
+
+            <div id="result" class="outfit"></div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
